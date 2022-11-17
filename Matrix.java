@@ -1,8 +1,8 @@
 public class Matrix{
     private int size;
-    private int[][] startMatrix = new int[][]; //need to change where this is initiated because you can not change a matrix once it is instantiated
-    private int[][] coderMatrix = new int[][];
-    private int[][] matrix = new int[MAX][MAX];
+    private int[][] startMatrix = new int[size][size]; //need to change where this is initiated because you can not change a matrix once it is instantiated
+    private int[][] coderMatrix = new int[size][size];
+    private int[][] matrix = new int[size][size];
 
     public Matrix(){
      size = 0;
