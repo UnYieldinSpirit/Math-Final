@@ -8,8 +8,11 @@ public class FinalProject extends Matrix {
 
     //may need to convert the passage into an array and then read from the array in order to push into the matrix
     public static void main(String []args){
-        String input = "Bingo Bongo!!";
-        int array[] = new int[input.length()];
+        String test = "Juice Wrld 999!";
+        String input = "When a child first catches adults out - when it first walks into his grave little head that adults do not always have divine intelligence, that their judgments are not always wise, their thinking true, their sentences just - his world falls into panic desolation. The gods are fallen and all safety gone. And there is one sure thing about the fall of Gods: they do not fall a little; they crash and shatter or sink deeply into green muck. It is a tedious job to build them up again; they never quite shine. And the child's world is never quite whole again. It is an aching kind of growing.";
+        int characterHolder[] = new int[input.length()];
+
+        readPassage(test);
     }
 
     public static void addToMatrix(int rowSize, int colSize, int pos){
@@ -20,6 +23,7 @@ public class FinalProject extends Matrix {
         }
     }
 
+    //reads the passage and separates each character to be read
     public static void readPassage(String input){
         for (int i = 0; i < input.length(); i++){
             System.out.println("Char " + i + " is " + input.charAt(i));
