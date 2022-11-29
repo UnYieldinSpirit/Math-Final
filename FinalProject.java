@@ -1,10 +1,12 @@
 import java.util.*;
+
+import javax.swing.plaf.BorderUIResource.MatteBorderUIResource;
+
 import java.lang.*;
 
 public class FinalProject extends Matrix {
     public int row;
     public int column;
-    //maybe create a method to strictly update the value of the placeholder
 
     //may need to convert the passage into an array and then read from the array in order to push into the matrix
     public static void main(String []args){
@@ -13,6 +15,8 @@ public class FinalProject extends Matrix {
         int characterHolder[] = new int[input.length()];
 
         readPassage(test);
+
+        Matrix encoder = new Matrix(3);
     }
 
     public static void addToMatrix(int rowSize, int colSize, int pos){
@@ -30,19 +34,20 @@ public class FinalProject extends Matrix {
 
         }
     }
-
+    
+    //main array construction method
     public int[] arrayContruction(String passage, int boom){
-        int passagePosition = 0;
-        int[] newArray = new int[100];
+        int passagePosition = 0; //holds the position of the passage.
+        int[] newArray = new int[passage.length()]; //array length is the same as the passage's length
         for(int i = 0; i < newArray.length; i++){
             if(i >= passage.length())
-                newArray[i] = -1000;
+                newArray[i] = -1000; //random number value so that way this is never a possible alphabet combo. Won't mess up the process.
                 else
-            newArray[i] = charTester(passagePosition, passage);
-            passagePosition++;
+            newArray[i] = charTester(passagePosition, passage); //returns the allotted character as a converted number
+            passagePosition++; //increase position in the passage
         }
         
-        return newArray;
+        return newArray; //completed array
     }
 
     public int charTester(int position, String passage){
