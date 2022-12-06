@@ -8,6 +8,7 @@ public class Matrix{
   }
   
   public Matrix(int n){
+   size = n;
    matrix = new int[n][n];
   }
 
@@ -15,7 +16,7 @@ public class Matrix{
     matrix = new int[m][n];
   }
   
-  public int getSize(){
+  public double getSize(){
    return size; 
   }
   
